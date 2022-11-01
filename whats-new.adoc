@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, gfc, global file cache' 
+summary: Informieren Sie sich über die Neuerungen in Global File Cache. 
+---
+= Was ist neu bei Global File Cache
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Informieren Sie sich über die Neuerungen in Global File Cache.
+
+
+
+== 24. Oktober 2022 (Version 2.1)
+
+Diese Version enthält die unten aufgeführten neuen Funktionen. Außerdem werden die in beschriebenen Probleme behoben https://docs.netapp.com/us-en/cloud-manager-file-cache/fixed-issues.html["Probleme Wurden Behoben"]. Aktualisierte Softwarepakete finden Sie unter https://docs.netapp.com/us-en/cloud-manager-file-cache/download-gfc-resources.html#download-required-resources["Auf dieser Seite"].
+
+
+
+=== Global File Cache ist jetzt für eine beliebige Anzahl von Lizenzen verfügbar
+
+Die vorherige Mindestanforderung von 10 Lizenzen bzw. 30 TB Speicher wurde entfernt. Für jeden 3 TB Storage wird eine Lizenz für Global File Cache ausgestellt.
+
+
+
+=== Unterstützung für die Verwendung eines Offline License Management Servers wurde hinzugefügt
+
+Ein Offline- oder Dark-Site ist License Management Server (LMS) besonders nützlich, wenn der LMS keine Internetverbindung zur Lizenzvalidierung mit Lizenzquellen hat. Während der Erstkonfiguration ist eine Internetverbindung und eine Verbindung zur Lizenzquelle erforderlich. Sobald die LMS-Instanz konfiguriert ist, kann sie dunkel werden. Alle Kanten/Kerne sollten eine Verbindung mit LMS haben, um die Lizenzen kontinuierlich zu validieren.
+
+
+
+=== Edge-Instanzen können weitere gleichzeitige Benutzer unterstützen
+
+Eine einzige globale File Cache Edge Instanz kann bis zu 500 Benutzer pro dedizierter physischer Edge Instanz sowie bis zu 300 Benutzer für dedizierte virtuelle Bereitstellungen bereitstellen. Die maximale Anzahl von Benutzern war bisher 400 bzw. 200.
+
+
+
+=== Verbesserter Optimus-PSM für die Konfiguration der Cloud-Lizenzierung
+
+
+
+=== Erweitert die Edge Sync-Funktion in Optimus UI (Edge Configuration), um alle verbundenen Clients anzuzeigen
+
+
+
+== 25. Juli 2022 (Version 2.0)
+
+Diese Version enthält die unten aufgeführten neuen Funktionen. Außerdem werden die in beschriebenen Probleme behoben https://docs.netapp.com/us-en/cloud-manager-file-cache/fixed-issues.html["Probleme Wurden Behoben"].
+
+
+
+=== Neues kapazitätsbasiertes Lizenzmodell für Global File Cache über Azure Marketplace
+
+Eine neue Lizenz für „Edge Cache“ verfügt über dieselben Funktionen wie die Lizenz „CVO Professional“, bietet jedoch auch Unterstützung für Global File Cache. Sie sehen diese Option bei der Implementierung eines neuen Cloud Volumes ONTAP Systems in Azure. Sie haben Anspruch auf die Bereitstellung eines globalen File Cache Edge-Systems für jeweils 3 tib bereitgestellte Kapazität auf dem Cloud Volumes ONTAP System. Es sollten mindestens 30 tib bereitgestellt werden. Der GFC License Manager Service wurde erweitert und bietet kapazitätsbasierte Lizenzierung.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html#capacity-based-licensing["Erfahren Sie mehr über das Edge Cache Lizenzpaket."]
+
+
+
+=== Global File Cache ist jetzt in Cloud Insights integriert
+
+NetApp Cloud Insights (CI) bietet einen vollständigen Überblick über Ihre Infrastruktur und Applikationen. Global File Cache ist nun in CI integriert. Dies ermöglicht eine vollständige Transparenz aller Kanten und Kerne sowie die Überwachung von Prozessen, die auf den Instanzen ausgeführt werden. Verschiedene Metriken für Global File Cache werden zur CI weitergeleitet, um einen vollständigen Überblick über das CI Dashboard zu geben. Siehe Kapitel 11 im https://repo.cloudsync.netapp.com/gfc/Global%20File%20Cache%202.1.0%20User%20Guide.pdf["NetApp Global File Cache User Guide"^]
+
+https://cloud.netapp.com/cloud-insights["Weitere Informationen zu Cloud Insights"]
+
+
+
+=== Lizenzverwaltungsserver wurde erweitert, um in sehr restriktiven Umgebungen betrieben zu werden
+
+Während der Lizenzkonfiguration sollte der License Management Server (LMS) Zugriff auf das Internet haben, um die Lizenzdetails von NetApp/Zuora zu erfassen. Sobald die Konfiguration erfolgreich ist, kann das LMS auch weiterhin im Offline-Modus arbeiten und Lizenzmöglichkeiten bereitstellen, obwohl es sich um restriktive Umgebungen handelt.
+
+
+
+=== Die Edge Sync-Benutzeroberfläche in Optimus wurde erweitert, um die Liste der verbundenen Clients auf einem Koordinator Edge anzuzeigen
+
+
+
+== 23. Juni 2022 (Version 1.3.1)
+
+Global File Cache Edge Software für Version 1.3.1 ist unter verfügbar https://docs.netapp.com/us-en/cloud-manager-file-cache/download-gfc-resources.html#download-required-resources["Auf dieser Seite"]. In dieser Version werden die in beschriebenen Probleme behoben https://docs.netapp.com/us-en/cloud-manager-file-cache/fixed-issues.html["Probleme Wurden Behoben"].
+
+
+
+== Mai 19 2022 (Version 1.3.0)
+
+Global File Cache Edge Software für Version 1.3.0 ist unter verfügbar https://docs.netapp.com/us-en/cloud-manager-file-cache/download-gfc-resources.html#download-required-resources["Auf dieser Seite"].
+
+
+
+=== Neue Metadaten-Edge-Sync-Funktion
+
+Diese „Metadaten Edge Sync“-Funktion verwendet die Edge-Synchronisierung als ihr Hauptframework. Nur Metadaten-Informationen werden an allen abonnierten Kanten aktualisiert und die Dateien/Ordner werden auf den Edge-Maschinen erstellt.
+
+
+
+=== Verbesserungen für License Manager Service
+
+Der LMS-Dienst (Global File Cache License Management Server) wurde erweitert, um Proxy-Einstellungen automatisch zu erkennen. Dies ermöglicht eine nahtlose Konfiguration.
+
+
+
+== 17. Dezember 2021 (Version 1.2.0)
+
+
+
+=== Das OpenSSL-Modul wurde auf Version 1.1.1l aktualisiert
+
+Es handelt sich um die neueste Version, die sicherer ist. Dieses Modul dient der sicheren Kommunikation zwischen GFC Edge und GFC Core.
+
+
+
+=== Die Protokollierungs-Infrastruktur wurde erweitert

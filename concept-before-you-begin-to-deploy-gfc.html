@@ -708,7 +708,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-14 18:28:48 +0000">12/14/2022</time>
+    <time datetime="2022-12-15 15:21:34 +0000">12/15/2022</time>
     
   
 
@@ -732,7 +732,7 @@
 <p>Je nach Ihren Anforderungen müssen Sie möglicherweise eine oder mehrere Global File Cache Core-Instanzen bereitstellen, um die Global File Cache Fabric zu erstellen. Die Kerninstanz dient als Traffic COP zwischen Ihren verteilten Global File Cache Edge Instanzen und den File Server-Ressourcen im Datacenter, beispielsweise File Shares, Ordner und Dateien.</p>
 </div>
 <div class="paragraph">
-<p>Wenn Sie Ihre Global File Cache-Bereitstellung entwerfen, müssen Sie entscheiden, was für Ihre Umgebung im Hinblick auf Skalierung, Verfügbarkeit von Ressourcen und in Bezug auf Redundanz das Richtige ist. Global File Cache Core kann auf folgende Weise implementiert werden:</p>
+<p>Beim Design der Global File Cache Implementierung müssen Sie herausfinden, welche Lösung sich für Ihre Umgebung im Hinblick auf Skalierung, Verfügbarkeit von Ressourcen und Redundanz am besten eignet. Global File Cache Core kann auf folgende Weise implementiert werden:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -830,7 +830,7 @@ Global File Cache Edge erkennt, ob er auf einer virtuellen oder physischen Insta
 <div class="sect2">
 <h3 id="storage-plattform-volumes">Storage-Plattform (Volumes)</h3>
 <div class="paragraph">
-<p>Die Back-End-Storage-Plattform – in diesem Fall Ihre implementierte Cloud Volumes ONTAP Instanz – sollte SMB-Dateifreigaben bereitstellen. Alle Freigaben, die durch den globalen Dateicache freigelegt werden, müssen der Gruppe „Alle“ die volle Kontrolle auf Share-Ebene ermöglichen, während sie die Berechtigungen durch NTFS-Berechtigungen einschränken.</p>
+<p>Die Back-End-Storage-Plattform – in diesem Fall sollte Ihre implementierte Cloud Volumes ONTAP-Instanz SMB-Dateifreigaben bereitstellen. Alle Freigaben, die durch den globalen Dateicache freigelegt werden, müssen der Gruppe „Alle“ die volle Kontrolle auf Share-Ebene ermöglichen, während sie die Berechtigungen durch NTFS-Berechtigungen einschränken.</p>
 </div>
 <div class="paragraph">
 <p>Wenn Sie auf der Cloud Volumes ONTAP Instanz nicht mindestens eine SMB-Dateifreigabe eingerichtet haben, müssen Sie die folgenden Informationen bereithalten, damit Sie diese Informationen während der Installation konfigurieren können:</p>
@@ -857,30 +857,19 @@ Global File Cache Edge erkennt, ob er auf einer virtuellen oder physischen Insta
 <div class="ulist">
 <ul>
 <li>
-<p>Bei Nutzung der abonnementbasierten GFC-Lizenzierung:</p>
-<div class="ulist">
-<ul>
+<p>https://gfcproxyforcm-prod.azurewebsites.net/</p>
+</li>
 <li>
 <p>https://rest.zuora.com/v1/subscriptions/</p>
 </li>
 <li>
 <p>https://rest.zuora.com/oauth/token</p>
 </li>
-</ul>
-</div>
-</li>
-<li>
-<p>Wenn Sie eine ältere Lizenzierung von NetApp verwenden:</p>
-<div class="ulist">
-<ul>
 <li>
 <p>https://talonazuremicroservices.azurewebsites.net</p>
 </li>
 <li>
 <p>https://talonlicensing.table.core.windows.net</p>
-</li>
-</ul>
-</div>
 </li>
 </ul>
 </div>
@@ -1036,7 +1025,7 @@ Ein Management-Server kann mehrere globale File Cache Core-Instanzen unterstütz
 <p>Firewall: TCP-Ports sollten zwischen Global File Cache Edge und Core Instanzen erlaubt sein.</p>
 </li>
 <li>
-<p>Global File Cache TCP Ports: 443 (HTTPS), 6618–6630.</p>
+<p>Global File Cache TCP Ports: 443 (HTTPS), 6618-6630.</p>
 </li>
 <li>
 <p>Netzwerkoptimierungs-Geräte (wie Riverbed Steelhead) müssen so konfiguriert werden, dass sie über die für Global File Cache spezifischen Ports (TCP 6618-6630) weitergeleitet werden.</p>

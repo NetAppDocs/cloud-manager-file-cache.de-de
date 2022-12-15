@@ -103,17 +103,3 @@ Diese „Metadaten Edge Sync“-Funktion verwendet die Edge-Synchronisierung als
 === Verbesserungen für License Manager Service
 
 Der LMS-Dienst (Global File Cache License Management Server) wurde erweitert, um Proxy-Einstellungen automatisch zu erkennen. Dies ermöglicht eine nahtlose Konfiguration.
-
-
-
-== 17. Dezember 2021 (Version 1.2.0)
-
-
-
-=== Das OpenSSL-Modul wurde auf Version 1.1.1l aktualisiert
-
-Es handelt sich um die neueste Version, die sicherer ist. Dieses Modul dient der sicheren Kommunikation zwischen GFC Edge und GFC Core.
-
-
-
-=== Die Protokollierungs-Infrastruktur wurde erweitert

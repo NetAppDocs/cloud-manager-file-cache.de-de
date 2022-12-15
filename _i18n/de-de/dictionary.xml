@@ -564,9 +564,6 @@
   <block id="2e0922ffb3ae1ae6ac16997e734d5154" category="paragraph">Diese „Metadaten Edge Sync“-Funktion verwendet die Edge-Synchronisierung als ihr Hauptframework. Nur Metadaten-Informationen werden an allen abonnierten Kanten aktualisiert und die Dateien/Ordner werden auf den Edge-Maschinen erstellt.</block>
   <block id="2273c570a2dcacbb1c4bb77abccca54b" category="section-title">Verbesserungen für License Manager Service</block>
   <block id="03036f549995f5d3240d1c89c4f2f496" category="paragraph">Der LMS-Dienst (Global File Cache License Management Server) wurde erweitert, um Proxy-Einstellungen automatisch zu erkennen. Dies ermöglicht eine nahtlose Konfiguration.</block>
-  <block id="24c153e30c311602185df383bdc152fd" category="section-title">Das OpenSSL-Modul wurde auf Version 1.1.1l aktualisiert</block>
-  <block id="9d15f44f2f441c9fbcdc28d40b323389" category="paragraph">Es handelt sich um die neueste Version, die sicherer ist. Dieses Modul dient der sicheren Kommunikation zwischen GFC Edge und GFC Core.</block>
-  <block id="e3c8f19755f12539be7c74e7dc14b3fe" category="section-title">Die Protokollierungs-Infrastruktur wurde erweitert</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Rechtliche Hinweise</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Rechtliche Hinweise ermöglichen den Zugriff auf Copyright-Erklärungen, Marken, Patente und mehr.</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Urheberrecht</block>
@@ -589,7 +586,6 @@
   <block id="e9b776ca4aec81050e673f885b2eac06" category="doc">Bevor Sie mit der Bereitstellung von Global File Cache beginnen</block>
   <block id="cd738516a0c7368cddca5d2174fbd3ce" category="section-title">Überlegungen zum Design von Global File Cache Core</block>
   <block id="6e85eb06ef3edf77062f6d45c1910526" category="paragraph">Je nach Ihren Anforderungen müssen Sie möglicherweise eine oder mehrere Global File Cache Core-Instanzen bereitstellen, um die Global File Cache Fabric zu erstellen. Die Kerninstanz dient als Traffic COP zwischen Ihren verteilten Global File Cache Edge Instanzen und den File Server-Ressourcen im Datacenter, beispielsweise File Shares, Ordner und Dateien.</block>
-  <block id="12b3668e4ae5e9987b7658b649439e54" category="paragraph">Wenn Sie Ihre Global File Cache-Bereitstellung entwerfen, müssen Sie entscheiden, was für Ihre Umgebung im Hinblick auf Skalierung, Verfügbarkeit von Ressourcen und in Bezug auf Redundanz das Richtige ist. Global File Cache Core kann auf folgende Weise implementiert werden:</block>
   <block id="5d60d6afb236f653125b44b76be39ca9" category="list-text">GFC Core Standalone-Instanz</block>
   <block id="3f56cdce3a042ceab7f4ba6e1cf5f6f7" category="list-text">GFC Core Load Distributed-Design (Cold Standby)</block>
   <block id="628a4a2f6eaf1d1281369e04da7f5585" category="paragraph">Siehe <block ref="dff9f26728968e7b308d7b9ca46f5bdd" category="inline-xref-macro-rx"></block> So ermitteln Sie die maximale Anzahl an Edge-Instanzen und die Gesamtanzahl der Benutzer, die jede Konfiguration unterstützen kann:</block>
@@ -610,7 +606,6 @@
   <block id="b878b843693a16500d3da98423bf22b6" category="paragraph">Die in diesem Abschnitt beschriebenen Voraussetzungen gelten für die in der Cloud installierten Komponenten: Den Global File Cache Management Server und den Global File Cache Core.</block>
   <block id="b51baa22d09e6c9f1931a23ebef6347d" category="paragraph">Die Voraussetzungen für Global File Cache Edge werden beschrieben <block ref="dc13b95521107f0e6174e0d4f00812b4" category="inline-link-macro-rx"></block>.</block>
   <block id="891a589deeeaf68084584fbfae4c3ae7" category="section-title">Storage-Plattform (Volumes)</block>
-  <block id="e6da02886af47462759989718f62ea49" category="paragraph">Die Back-End-Storage-Plattform – in diesem Fall Ihre implementierte Cloud Volumes ONTAP Instanz – sollte SMB-Dateifreigaben bereitstellen. Alle Freigaben, die durch den globalen Dateicache freigelegt werden, müssen der Gruppe „Alle“ die volle Kontrolle auf Share-Ebene ermöglichen, während sie die Berechtigungen durch NTFS-Berechtigungen einschränken.</block>
   <block id="152468376710017819b274fb14a70617" category="paragraph">Wenn Sie auf der Cloud Volumes ONTAP Instanz nicht mindestens eine SMB-Dateifreigabe eingerichtet haben, müssen Sie die folgenden Informationen bereithalten, damit Sie diese Informationen während der Installation konfigurieren können:</block>
   <block id="981640f9fb09fe09a937c7da955d9dfb" category="list-text">Active Directory-Domänenname, Name-Server-IP-Adresse, Active Directory-Anmeldedaten.</block>
   <block id="794cb058ebafe2e7b0df56dea2e389d4" category="list-text">Name und Größe des Volumes, das Sie erstellen möchten, sowie Name des Aggregats, auf dem das Volume erstellt wird, und Share-Name.</block>
@@ -652,7 +647,6 @@
   <block id="a5085b0443e5d8b1f1dbe592e35a2b60" category="list-text">\https://login.netapp.com/ms_oauth/oauth2/endpoints</block>
   <block id="8af6b191c0a6466d92047c2ff20cacd2" category="list-text">\https://login.netapp.com/ms_oauth/oauth2/endpoints/oauthservice/tokens</block>
   <block id="8503ae56f9a302bb9d549115b584b0fc" category="list-text">Firewall: TCP-Ports sollten zwischen Global File Cache Edge und Core Instanzen erlaubt sein.</block>
-  <block id="6c912ddbaed2bf80fe819c9899e03b7d" category="list-text">Global File Cache TCP Ports: 443 (HTTPS), 6618–6630.</block>
   <block id="e0533a7cc48f1b65dc6efe4d93506732" category="sidebar">Dokumente zum Global File Cache</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Versionshinweise</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Was ist neu</block>
@@ -695,4 +689,8 @@
   <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">Suchen Sie auf der Seite für die Support-Registrierung die Seriennummer Ihres Kontos.</block>
   <block id="50a1dc01b7312307c34a888071586955" category="list-text">Kopieren Sie die Seriennummer des Kontos von Schritt 2 oben, füllen Sie die Sicherheitsprüfung aus und bestätigen Sie dann, dass Sie die globale Datenschutzrichtlinie von NetApp lesen.</block>
   <block id="cc8b0535948da368f832027c19b7f853" category="list-text">Kopieren Sie die oben angegebene Seriennummer (960xxxx) für das Feld „Seriennummer“. Dadurch wird die Kontobearbeitung beschleunigt.</block>
+  <block id="d0ae1d418af223e06e706dd1705e0d76" category="paragraph">Beim Design der Global File Cache Implementierung müssen Sie herausfinden, welche Lösung sich für Ihre Umgebung im Hinblick auf Skalierung, Verfügbarkeit von Ressourcen und Redundanz am besten eignet. Global File Cache Core kann auf folgende Weise implementiert werden:</block>
+  <block id="eebe944a361fcd12586147893245a793" category="paragraph">Die Back-End-Storage-Plattform – in diesem Fall sollte Ihre implementierte Cloud Volumes ONTAP-Instanz SMB-Dateifreigaben bereitstellen. Alle Freigaben, die durch den globalen Dateicache freigelegt werden, müssen der Gruppe „Alle“ die volle Kontrolle auf Share-Ebene ermöglichen, während sie die Berechtigungen durch NTFS-Berechtigungen einschränken.</block>
+  <block id="ca8b4d0fc39e2135cbcdf391be62059b" category="list-text">\https://gfcproxyforcm-prod.azurewebsites.net/</block>
+  <block id="e59af2ecfd4c7dd3a53e6980dc28d267" category="list-text">Global File Cache TCP Ports: 443 (HTTPS), 6618-6630.</block>
 </blocks>
